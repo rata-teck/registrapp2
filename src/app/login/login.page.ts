@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../modelos/usuario';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,12 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  public usuarioAdmin : string = 'televisa';
-  public claveAdmin : string = '8008135';
+  public usuarios! : Array<Usuario>;
+
+  public usuario : Usuario = {
+    tipo : '',
+    usuario : '',
+    clave : ''
+  }
 
 }
